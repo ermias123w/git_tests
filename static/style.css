@@ -1,0 +1,3 @@
+body { font-family: sans-serif; max-width: 480px; margin: auto; padding: 1em; }
+input, select, button { width: 100%; margin: 0.5em 0; padding: 0.5em; }
+@media (max-width: 600px) { body { font-size: 1.1em; } }
