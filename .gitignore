@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+predictions.db
+predictions.json
+api_keys.json
+.env

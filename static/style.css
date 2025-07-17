@@ -1,0 +1,12 @@
+body { font-family: sans-serif; max-width: 480px; margin: auto; padding: 1em; }
+input, select, button { width: 100%; margin: 0.5em 0; padding: 0.5em; }
+@media (max-width: 600px) { body { font-size: 1.1em; } }
+.welcome-box {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1em;
+  margin-bottom: 1em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.welcome-box h3 { margin-top: 0; }
+.welcome-box ul { margin: 0 0 1em 1.2em; }

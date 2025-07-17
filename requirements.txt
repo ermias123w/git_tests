@@ -1,0 +1,11 @@
+flask
+apscheduler
+requests
+pandas
+numpy
+scikit-learn
+ta
+transformers
+torch
+sqlalchemy
+python-telegram-bot

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crypto Predictor Setup</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="welcome-box">
+    <h3>Welcome to Your AI-Powered Crypto Prediction Assistant</h3>
+    <p>
+      This is your AI-powered crypto prediction assistant, designed to give you live, accurate, and evolving trading forecasts directly inside the app. Powered by cutting-edge AI models including LSTM, Transformers, FinBERT for sentiment analysis, and reinforcement learning (PPO), this system doesn’t just predict — it learns from its past and grows smarter with every trade scenario it sees.
+    </p>
+    <ul>
+      <li><b>API Keys:</b> Enter your keys for CoinGecko, CoinMarketCap, or CryptoCompare for live prices. For news, use NewsAPI and/or CryptoPanic.</li>
+      <li><b>Supported Coins:</b> BTC/USDT and ETH/USDT are recommended for best results. You can expand to others later.</li>
+      <li><b>Sentiment Analysis:</b> The AI reads market moods in real time from news sources, giving you an edge on big headlines and sentiment shifts.</li>
+      <li><b>Customization:</b> Choose your timeframe, indicators (RSI, EMA, MACD, Bollinger Bands), and risk controls (capital at risk, SL/TP, etc.).</li>
+      <li><b>Live Predictions:</b> See position (LONG/SHORT/WAIT), confidence score, SL/TP, and timestamp — all updated live.</li>
+      <li><b>Continuous Learning:</b> The system tracks and learns from every prediction, improving accuracy over time using reinforcement learning.</li>
+    </ul>
+    <p>
+      <b>Get started by entering your API keys and preferences below!</b>
+    </p>
+  </div>
+  <h2>Setup Crypto Predictor</h2>
+  <form action="/setup" method="post">
+    <label>CoinGecko API Key:</label>
+    <input type="text" name="coingecko" required>
+    <label>NewsAPI Key:</label>
+    <input type="text" name="newsapi" required>
+    <label>CryptoPanic API Key:</label>
+    <input type="text" name="cryptopanic" required>
+    <label>Telegram Bot Token:</label>
+    <input type="text" name="telegram_token" required>
+    <label>Telegram Chat ID:</label>
+    <input type="text" name="telegram_chat_id" required>
+    <label>Confidence Threshold (0-1):</label>
+    <input type="number" step="0.01" min="0" max="1" name="confidence" value="0.7" required>
+    <label>SL/TP Preference (e.g. 2/5):</label>
+    <input type="text" name="sl_tp" value="2/5" required>
+    <label>Update Frequency (minutes):</label>
+    <input type="number" min="5" max="15" name="frequency" value="10" required>
+    <label>Mode:</label>
+    <select name="mode">
+      <option value="paper" selected>Paper</option>
+      <option value="live">Live</option>
+    </select>
+    <button type="submit">Save & Start</button>
+  </form>
+</body>
+</html>
